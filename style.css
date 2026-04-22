@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+/* =========================
+   1. BODY STYLES
+========================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f1ea;
+  color: #2d1b14;
+}
+
+
+/* =========================
+   2. NAVBAR STYLES
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: rgba(35, 22, 17, 0.95);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.logo {
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: #f8f1e7;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  color: #ddb892;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #f8f1e7;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  background: #ddb892;
+  transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #ddb892;
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================
+   3. HERO STYLES
+========================= */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              url('hero-image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* =========================
+   PAGE BANNER STYLES
+========================= */
+.page-banner {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              url('about-coffee.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   MENU SECTION STYLES
+========================= */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 70px 10%;
+  background: #f8f1ea;
+}
+
+.menu-item {
+  background: rgba(255, 248, 240, 0.95);
+  padding: 35px 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(60, 35, 20, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(176, 137, 104, 0.15);
+}
+
+.menu-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #5c3a21;
+}
+
+.menu-item p {
+  font-size: 1rem;
+  color: #8b5e3c;
+  font-weight: 500;
+}
+
+.menu-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgba(60, 35, 20, 0.15);
+}
+
+
+/* =========================
+   5. CONTACT FORM STYLES
+========================= */
+.contact-form {
+  padding: 60px 10%;
+}
+
+.contact-form form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+
+/* =========================
+   6. FOOTER STYLES
+========================= */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #2d1b14;
+  color: white;
+  margin-top: 40px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons i {
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons i:hover {
+  color: #ddb892;
+}
+
+
+/* =========================
+   7. RESPONSIVE STYLES
+========================= */
+@media(max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .page-banner {
+    font-size: 2rem;
+  }
+}
